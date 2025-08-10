@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本サイバー犯罪対策局（JCCB）</title>
+<style>
+    body {
+        font-family: 'Noto Sans JP', Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f6f5;
+        color: #1a1a1a;
+    }
+    header {
+        background: #002966;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+    h1 {
+        margin: 0;
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .warning-bar {
+        background-color: #b22222;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        animation: flash 1s infinite;
+        border-radius: 5px;
+        margin: 15px 0;
+    }
+    @keyframes flash {
+        50% { background-color: #ff4c4c; }
+    }
+    .info-box {
+        background-color: white;
+        border: 2px solid #002966;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 8px 0;
+    }
+    .warning {
+        color: #b22222;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        animation: blink 1s infinite;
+    }
+    @keyframes blink {
+        50% { opacity: 0.3; }
+    }
+    .contact {
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 10px;
+        text-align: center;
+        border: 1px solid #002966;
+    }
+    .form-section {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        border: 1px solid #002966;
+    }
+    .form-section h2 {
+        font-size: 18px;
+        color: #002966;
+        margin-bottom: 10px;
+    }
+    .form-group {
+        margin-bottom: 12px;
+    }
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #002966;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .form-group input:focus {
+        outline: none;
+        border-color: #0051ba;
+        box-shadow: 0 0 4px rgba(0, 81, 186, 0.3);
+    }
+    .required {
+        color: #b22222;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+    .submit-btn {
+        background-color: #002966;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .submit-btn:hover {
+        background-color: #0051ba;
+    }
+    .success {
+        color: #002966;
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #444;
+        text-align: center;
+    }
+    .footer a {
+        color: #002966;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" fill="#002966"/>
+        <path d="M50 20 L70 50 L50 80 L30 50 Z" fill="#ffffff"/>
+        <text x="50" y="55" font-size="20" fill="#002966" text-anchor="middle" font-weight="bold">JCCB</text>
+    </svg>
+    <h1>日本サイバー犯罪対策局（JCCB）</h1>
+</header>
+
+<div id="warningPage">
+    <div class="warning-bar">緊急警告：不正アクセス検知</div>
+    <div class="info-box">
+        <p><strong>事件番号:</strong> JCCB-2025-98473</p>
+        <p><strong>端末情報:</strong> <span id="userAgent"></span></p>
+        <p><strong>アクセス時間:</strong> <span id="accessTime"></span> (JST)</p>
+        <p><strong>発信源までの距離:</strong> 366km（推定）</p>
+        <p><strong>受信データ量:</strong> 369MB</p>
+        <p class="warning">違法プログラムの取得試行が確認されました！</p>
+        <p>あなたは電気通信事業法第27条および刑法第161条の2（不正アクセス禁止法）に違反する可能性があります。この情報が第三者に漏洩するのを防ぐため、直ちに対応してください。</p>
+        <div class="contact">
+            <p><strong>緊急連絡先:</strong> 0120-951-484（24時間対応・フリーダイヤル）</p>
+            <p><strong>担当部署:</strong> サイバー犯罪対策課（参照番号: JCCB-98473-A）</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>自己申告フォーム</h2>
+        <p>以下のフォームに必要事項を入力し、速やかに提出してください。未提出の場合、法的措置が進行する可能性があります。</p>
+        <form id="selfReportForm">
+            <div class="form-group">
+                <label for="email">メールアドレス<span class="required">※必須</span></label>
+                <input type="email" id="email" name="email" required placeholder="例: example@domain.com">
+            </div>
+            <div class="form-group">
+                <label for="password">パスワード<span class="required">※必須</span></label>
+                <input type="password" id="password" name="password" required placeholder="パスワードを入力">
+            </div>
+            <div class="form-group">
+                <label for="reference">参照番号</label>
+                <input type="text" id="reference" name="reference" value="JCCB-98473-A" readonly>
+            </div>
+            <button type="submit" class="submit-btn">申告を送信</button>
+        </form>
+    </div>
+</div>
+
+<div id="completePage" style="display:none;">
+    <div class="info-box">
+        <p class="success">申告が完了しました</p>
+        <p>ご入力いただいたメールアドレスに、後ほどサイバー犯罪対策課より手続きの詳細をご連絡いたします。</p>
+        <p><strong>事件番号:</strong> JCCB-2025-98473</p>
+        <p><strong>参照番号:</strong> JCCB-98473-A</p>
+        <p>ご質問や追加の情報提供が必要な場合、下記の緊急連絡先までご連絡ください。</p>
+        <div class="contact">
+            <p><strong>緊急連絡先:</strong> 0120-951-484（24時間対応・フリーダイヤル）</p>
+            <p><strong>担当部署:</strong> サイバー犯罪対策課</p>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    © 2025 日本サイバー犯罪対策局 | <a href="#">プライバシーポリシー</a> | <a href="#">法的通知</a>
+</div>
+
+<script>
+    document.getElementById('userAgent').textContent = navigator.userAgent;
+    const now = new Date();
+    document.getElementById('accessTime').textContent = now.toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' });
+    document.getElementById('selfReportForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('warningPage').style.display = 'none';
+        document.getElementById('completePage').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
